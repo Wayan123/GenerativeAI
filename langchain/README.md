@@ -1,6 +1,6 @@
 # LangChain
 
-LangChain is a `framework` for developing applications powered by a language models.
+LangChain is a `framework` for developing applications powered by language models.
 
 It connects a language model to other sources of data
 
