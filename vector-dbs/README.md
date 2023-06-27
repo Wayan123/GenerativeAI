@@ -14,9 +14,9 @@ Vector databases are different from traditional databases in that they store dat
 
 Although SQL and NoSQL databases might work for some ML use cases, vector databases are better suited for use cases involving text, search, recommendation, audio, and NLP. Vector databases are also better suited for use cases involving similarity search, which is a search technique that finds similar items based on their features.
 
-![Alt Text](images/vectordb/VectorDB2.png)
+![Alt Text](images/VectorDB2.png)
 
-![Alt Text](images/vectordb/VectorDB1.png)
+![Alt Text](images/VectorDB1.png)
 
 ### Vector DBs
 
