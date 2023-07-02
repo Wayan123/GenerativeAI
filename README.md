@@ -19,7 +19,7 @@ Generative AI and predictive AI are two different types of artificial intelligen
 
 Predictive AI is used to predict future events based on past data. Generative AI is used to create new data based on patterns and structures learned from existing data.
 
-## Embeddings
+## Embeddings (Numerical Vector)
 
 Turning Words, Images and Videos into Numbers
 
@@ -27,7 +27,7 @@ Embeddings are techniques that convert complex data, such as words, into simpler
 
 ## Transformers
 
-Transformers are a type of neural network architecture that underlies models like GPT-3, leveraging self-attention mechanisms to process and generate text efficiently and effectively
+Transformers are a type of `neural network architecture` that underlies models like GPT-3, leveraging self-attention mechanisms to process and generate text efficiently and effectively
 
 Transformer-based models can process input tokens in parallel, making them more scalable and capable of handling long-range dependencies in the text.
 
