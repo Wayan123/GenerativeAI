@@ -2,7 +2,9 @@
 
 ## Embeddings
 
-Turning Words, Images and Videos into Numbers
+Embedding is just a vector, a list of numbers with a semantic meaning only understandable by the machine.
+
+Turning Words, Images and Videos into Numbers.
 
 Embeddings are techniques that convert complex data, such as words, into simpler numerical representations (called vectors). This makes it easier for AI systems to understand and work with the data.
 
@@ -43,3 +45,11 @@ https://github.com/qdrant/qdrant
 4. Recommendation (Ranking) Engines : Suggest the most relevant items to users based on their past purchases or preferences. Identifying the nearest neighbors of a given item in a vector database can help with this.
 
 5. Anomaly Detection : Identify unusual patterns in data that do not conform to expected behavior.
+
+## When do use Vector DBs
+
+GPT is an incredibly powerful tool for natural language processing tasks. However, when it comes to customized tasks, its capacity can be limited by the input token size.
+
+For example, GPT has a limited input size (4,096 for GPT3.5), but you have a very long text (e.g. a book) that you want to ask questions about. While fine-tuning GPT with your private data is a potential solution, it can be a complex and expensive process, requiring high computational power and expertise in machine learning.
+
+Fortunately, there is an alternative solution that can enhance GPT’s performance without requiring any changes to the model itself: using an external vector database to store your data and letting GPT retrieve relevant data to answer your prompting questions.
