@@ -1,0 +1,20 @@
+# Ignore .env files
+**/.env
+**/env.js
+
+# Ignore virtual environment folders
+**/venv/
+**/.venv/
+**/env/
+
+# Ignore virtual environment files
+**/pip-selfcheck.json
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/__pycache__/
+
+# Ignore bin, include, and lib folders
+**/bin/
+**/include/
+**/lib/
