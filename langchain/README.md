@@ -13,7 +13,7 @@ Imagine
 - You also want to combine the model with other models
 - Give access to Google Search or Wikipedia to make it even more powerful
 
-LangChain makes all this whole lot easier. It allows building applications with LLMs through composability.
+LangChain makes all of this a whole lot easier. It allows building applications with LLMs through composability.
 
 ![Alt Text](images/LangChain1.png)
 
@@ -87,6 +87,8 @@ llm(prompt.format(concept="regularization"))
 ### Chains
 
 Sequence of Calls
+
+Many a time, to solve tasks, a single API call to an LLM is not enough. This module allows other tools to be integrated. For example, you may need to get data from a specific URL, summarize the returned text, and answer questions using the generated summary. This module allows multiple tools to be concatenated in order to solve complex tasks.
 
 Chains go beyond one LLM call and sequences of calls. For example you can chain together a prompt template and a LLM call.
 
