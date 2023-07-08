@@ -8,6 +8,8 @@ Turning Words, Images and Videos into Numbers.
 
 Embeddings are techniques that convert complex data, such as words, into simpler numerical representations (called vectors). This makes it easier for AI systems to understand and work with the data.
 
+To store documents as vectors, a vector database requires a process called `embedding` to convert each word into a vector of hundreds or thousands of `different dimensions`. For example, OpenAI `Ada` embedding results in over 1500 dimensions.
+
 ## Vector Databases
 
 Vector databases store data such as text, video or images that are converted into vector `embeddings` for AI models to access them quickly. Vector databases are used in machine learning (ML) applications such as recommendation systems, search engines, and natural language processing (NLP).
