@@ -35,7 +35,7 @@ Generaic Interface for LLMs
 
 You can access models form OpenAI, Cohere, HuggingFace and many more providers.
 
-(Models, Prompt and Parsers Note Book)[modules/L1_Models_Prompts_Parsers.ipynb]
+[Models, Prompt and Parsers Note Book](modules/L1_Model_prompt_parser.ipynb)
 
 ### Prompts
 
