@@ -35,26 +35,7 @@ Generaic Interface for LLMs
 
 You can access models form OpenAI, Cohere, HuggingFace and many more providers.
 
-```python
-# import schema for chat messages and ChatOpenAI in order to query chatmodels GPT-3.5-turbo or GPT-4
-
-from langchain.schema import (
-    AIMessage,
-    HumanMessage,
-    SystemMessage
-)
-from langchain.chat_models import ChatOpenAI
-
-
-chat = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0.3)
-messages = [
-    SystemMessage(content="You are an expert data scientist"),
-    HumanMessage(content="Write a Python script that trains a neural network on simulated data ")
-]
-response=chat(messages)
-
-print(response.content,end='\n')
-```
+(Models, Prompt and Parsers Note Book)[modules/L1_Models_Prompts_Parsers.ipynb]
 
 ### Prompts
 
@@ -107,23 +88,15 @@ chain.run({"country": "Germany"})
 
 ### Memory (Embeddings and Vector Stores)
 
+https://python.langchain.com/docs/modules/memory/
+
+[Memory Note Book](modules/L2_Memory.ipynb)
+
 Provides a Standard Interface for memory and memory implementations
 
 You can easily store a message history of a Chatbot.
 
 The idea behind embeddings and Vector Stores is to break large data into chunks and store those to be queried when relevant.
-
-```python
-from langchain.memory import ChatMessageHistory
-
-history = ChatMessageHistory()
-
-history.add("Hello")
-
-history.add("How are you?")
-
-history.get()
-```
 
 ### Indexes
 
