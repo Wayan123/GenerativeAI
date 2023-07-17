@@ -73,20 +73,30 @@ Many a time, to solve tasks, a single API call to an LLM is not enough. This mod
 
 Chains go beyond one LLM call and sequences of calls. For example you can chain together a prompt template and a LLM call.
 
-```python
+#### Sequential Chain
 
-from langchain.models import GPT3Model
-from langchain.prompts import PromptTemplate
-from langchain.chains import Chain
+Sequential Chain allows you to chain multiple calls to LLMs together.
 
-model = GPT3Model("openai", "davinci")
-template = PromptTemplate("What is the capital of {country}?")
-chain = Chain([template, model])
+[Chains NoteBook](modules/L3_Chains.ipynb)
 
-chain.run({"country": "Germany"})
-```
+https://python.langchain.com/docs/modules/chains/foundational/sequential_chains
+
+![Sequential Chain](images/LangChain-SequentialChain.png)
+
+#### Router Chain
+
+Router Chain allows you to route the input to different chains based on the input.
+
+[Chains NoteBook](modules/L3_Chains.ipynb)
+
+https://python.langchain.com/docs/modules/chains/foundational/router
+
+![Router Chain](images/LangChain-RouterChain.png)
 
 ### Memory (Embeddings and Vector Stores)
+
+When you interact with models, naturally they don't remember what you say before or any of
+the previous conversation, which is an issue when you're building some applications like Chatbot and you want to have a conversation with them.
 
 https://python.langchain.com/docs/modules/memory/
 
