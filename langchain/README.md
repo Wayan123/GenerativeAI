@@ -81,6 +81,8 @@ Sequential Chain allows you to chain multiple calls to LLMs together.
 
 https://python.langchain.com/docs/modules/chains/foundational/sequential_chains
 
+![Sequential Chains](images/LangChain-SequentialChains.png)
+
 ![Sequential Chain](images/LangChain-SequentialChain.png)
 
 #### Router Chain
