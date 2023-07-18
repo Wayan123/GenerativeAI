@@ -1,4 +1,10 @@
-# GenerativeAI
+# Vector Stores
+
+LLM's knowledge is restricted to its training set. Suppose the model was trained on data up to 2021 and is asked about a company founded in 2023. In that case, it may generate a plausible but entirely fabricated description - a phenomenon known as **hallucination**. Managing hallucinations is tricky, especially in applications where accuracy and reliability are paramount, such as customer-service chatbots, knowledge-base assistants, or AI tutors.
+
+One promising strategy to mitigate hallucination is the use of **retrievers** in tandem with LLMs. A retriever fetches relevant information from a trusted knowledge base (like a search engine), and the LLM is then specifically prompted to rearrange the information without inventing additional details.
+
+Efficient retrievers are built using **embedding** models that map texts to vectors. These vectors are then stored in specialized databases called vector stores.
 
 ## Embeddings
 
@@ -9,6 +15,21 @@ Turning Words, Images and Videos into Numbers.
 Embeddings are techniques that convert complex data, such as words, into simpler numerical representations (called vectors). This makes it easier for AI systems to understand and work with the data.
 
 To store documents as vectors, a vector database requires a process called `embedding` to convert each word into a vector of hundreds or thousands of `different dimensions`. For example, OpenAI `Ada` embedding results in over 1500 dimensions.
+
+**Language models** can only inspect a few thousand words at a time. So if we have really large documents, how can we get the language model to answer questions about everything that's in there?
+
+This is where **embeddings** and vector stores come into play.
+
+**Embeddings** create numerical representations for pieces of text.
+
+This numerical representation captures the **semantic meaning** of the piece of text that it's been run over.Pieces of text with **similar content** will have **similar vectors**.
+
+In the example below, we can see that we have three sentences. The first two are about pets, while the third is about a car.If we look at the representation in the numeric space, we can see that when we compare the two vectors on the pieces of text corresponding to the sentences about pets, they're very similar.
+
+While if we compare it to the one that talks about a car, they're not similar at all. This will let us easily figure out which pieces of text are like each other, which will be very useful as
+we think about which pieces of text we want to include when passing to the language model to answer a question.
+
+![Embeddings](images/Embeddings.png)
 
 ## Vector Databases
 
@@ -21,6 +42,11 @@ Although SQL and NoSQL databases might work for some ML use cases, vector databa
 ![Alt Text](images/VectorDB2.png)
 
 ![Alt Text](images/VectorDB1.png)
+
+A **vector database** is a way to store vector representations. The way that we create this vector database is we populate it with chunks of text coming from incoming documents. When we get a big incoming document, we're first going to break it up into smaller chunks. This helps create pieces of text that are smaller than the original document, which is useful because we may not be able to pass the whole document to the language model. So we want to create these small chunks
+so we can only pass the most relevant ones to the language model. We then create an embedding for each of these chunks, and then we store those in a vector database.
+
+![Vector Databases](images/VectorDatabases.png)
 
 ### Vector DBs
 

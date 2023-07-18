@@ -67,7 +67,7 @@ llm(prompt.format(concept="regularization"))
 
 ### Chains
 
-Sequence of Calls
+Chain is an end-to-end wrapper around multiple individual components, providing a way to accomplish a common use case by combining these components in a specific sequence. The most commonly used type of chain is the LLMChain, which consists of a PromptTemplate, a model (either an LLM or a ChatModel), and an optional output parser.
 
 Many a time, to solve tasks, a single API call to an LLM is not enough. This module allows other tools to be integrated. For example, you may need to get data from a specific URL, summarize the returned text, and answer questions using the generated summary. This module allows multiple tools to be concatenated in order to solve complex tasks.
 
@@ -116,33 +116,33 @@ Utility functions to load your own text data and create indexes for it.
 You can combine your own data with the data from the LLMs.
 It provides Document Loaders for PDFs, Emails, and many more.
 
-```python
-
-from langchain.document_loaders import PyPDFLoader
-from langchain.document_loaders import UnstructuredEMailLoader
-from langchain.document_loaders import NotionDirectLoader
-
-loader = NotionDirectLoader("https://www.notion.so/My-Notion-Page-123456789")
-loader = PyPDFLoader("path/to/file.pdf")
-loader = UnstructuredEMailLoader("path/to/file.eml")
-
-loader.load()
-
-```
-
 It also provides Vector store interfaces to store and query vectors.
 
-```python
+We want to use **language models** and combine it with a lot of our documents.
 
-from langchain.vector_stores import Pinecone
+But there's a key issue. **Language models** can only inspect a few thousand
+words at a time. So if we have really large documents, how can we get
+the language model to answer questions about everything
+that's in there?
 
-vector_store = Pinecone("my-pinecone-api-key")
+This is where **embeddings** and vector stores come into play.
+First, let's talk about embeddings.
 
-vector_store.add("Hello World", [0.1, 0.2, 0.3])
+**Embeddings** create numerical representations for pieces of text.
 
-vector_store.query([0.1, 0.2, 0.3])
+This numerical representation captures the **semantic meaning** of the piece of text that it's been run over.Pieces of text with **similar content** will have **similar vectors**.
 
-```
+In the example below, we can see that we have three sentences. The first two are about pets, while the third is about a car.If we look at the representation in the numeric space, we can see that when we compare the two vectors on the pieces of text corresponding to the sentences about pets, they're very similar.
+
+While if we compare it to the one that talks about a car, they're not similar at all. This will let us easily figure out which pieces of text are like each other, which will be very useful as
+we think about which pieces of text we want to include when passing to the language model to answer a question.
+
+![Embeddings](images/LangChain-Embeddings.png)
+
+A **vector database** is a way to store these vector representations. The way that we create this vector database is we populate it with chunks of text coming from incoming documents. When we get a big incoming document, we're first going to break it up into smaller chunks. This helps create pieces of text that are smaller than the original document, which is useful because we may not be able to pass the whole document to the language model. So we want to create these small chunks
+so we can only pass the most relevant ones to the language model. We then create an embedding for each of these chunks, and then we store those in a vector database.
+
+![Vector Databases](images/LangChain-VectorDatabases.png)
 
 ### Agents and Tools
 
