@@ -50,6 +50,8 @@ so we can only pass the most relevant ones to the language model. We then create
 
 ### Vector DBs
 
+[activeloop Deep Lake](https://docs.activeloop.ai/)
+
 https://www.pinecone.io/
 
 https://github.com/chroma-core/chroma
