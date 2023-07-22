@@ -56,3 +56,27 @@ Fine-tuning is a common approach to transfer learning, where knowledge gained fr
 ### Reinforcement Learning from Human Feedback (RLHF)
 
     `RLHF` is a type of fine-tuning that uses human feedback to train the LLM. Human feedback can be collected in a variety of ways, such as through surveys, interviews, or user studies. RLHF is a more complex and time-consuming way to fine-tune an LLM, but it can be more effective than SFT.ur data.
+
+## Retrieval Augmented Generation (RAG)
+
+LLM's knowledge is restricted to its training set. So, suppose the model was trained on data up to 2021 and is asked about a company founded in 2023. In that case, it may generate a plausible but entirely fabricated description - a phenomenon known as `hallucination`.
+
+Managing `hallucinations` is tricky, especially in applications where accuracy and reliability are paramount, such as customer-service chatbots, knowledge-base assistants, or AI tutors.
+
+One promising strategy to mitigate `hallucination` is the use of `retrievers` in tandem with LLMs. A retriever fetches relevant information from a trusted knowledge base (Documents / Vector Store), and the LLM is then specifically prompted to rearrange the information without inventing additional details.
+
+Efficient retrievers are built using embedding models that map texts to vectors. These vectors are then stored in specialized databases called vector stores.
+
+Interaction between Retrieval Augmented Generation (RAG) and Large Language Models (LLM)
+
+![RAG](images/RAG1.png)
+
+![RAG](images/RAG2.png)
+
+![RAG](images/RAG3.png)
+
+## OpenAI Rate Limits
+
+The OpenAI API has separate limits for requests per minute and tokens per minute.
+
+[Why rate limits exist & Default rate limits](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_handle_rate_limits.ipynb)
