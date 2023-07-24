@@ -35,7 +35,7 @@ Generaic Interface for LLMs
 
 You can access models form OpenAI, Cohere, HuggingFace and many more providers.
 
-[Models, Prompt and Parsers Note Book](modules/L1_Model_prompt_parser.ipynb)
+[Models, Prompt and Parsers Note Book](langchain_llm_application_development/L1_Model_prompt_parser.ipynb)
 
 ### Prompts
 
@@ -77,7 +77,7 @@ Chains go beyond one LLM call and sequences of calls. For example you can chain 
 
 Sequential Chain allows you to chain multiple calls to LLMs together.
 
-[Chains NoteBook](modules/L3_Chains.ipynb)
+[Chains NoteBook](langchain_llm_application_development/L3_Chains.ipynb)
 
 https://python.langchain.com/docs/modules/chains/foundational/sequential_chains
 
@@ -89,7 +89,7 @@ https://python.langchain.com/docs/modules/chains/foundational/sequential_chains
 
 Router Chain allows you to route the input to different chains based on the input.
 
-[Chains NoteBook](modules/L3_Chains.ipynb)
+[Chains NoteBook](langchain_llm_application_development/L3_Chains.ipynb)
 
 https://python.langchain.com/docs/modules/chains/foundational/router
 
@@ -102,7 +102,7 @@ the previous conversation, which is an issue when you're building some applicati
 
 https://python.langchain.com/docs/modules/memory/
 
-[Memory Note Book](modules/L2_Memory.ipynb)
+[Memory Note Book](langchain_llm_application_development/L2_Memory.ipynb)
 
 Provides a Standard Interface for memory and memory implementations
 
