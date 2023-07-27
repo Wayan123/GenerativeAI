@@ -96,6 +96,10 @@ https://github.com/qdrant/qdrant
 | Data Persistence         | With Chroma’s ephemeral option, the data stored in Chroma is temporary and exists only during the runtime of the application. Once the application stops or the machine is restarted, the data is lost. This option makes Chroma suitable for testing and experimentation purposes or for temporary storage.            | Pinecone provides data persistence, which means that the vector data stored in the Pinecone database will be retained even after the application stops or the machine is restarted. This makes Pinecone (and Chroma’s self-host option) suitable for long-term storage and production use cases.                          |
 | Scalability Alternatives | Chroma’s local storage is limited by the resources (e.g. memory and storage) of the local machine. As your data grows, you may need to scale your machine’s resources to handle the increased data.                                                                                                                     | Being a managed service, Pinecone handles the scalability aspect for you. As your data grows, Pinecone will scale the underlying infrastructure to accommodate the increased data. Pinecone is designed to handle large-scale vector data storage and retrieval efficiently, making it suitable for production use cases. |
 
+### Vector Database Benchmarks
+
+https://qdrant.tech/benchmarks/
+
 ### Usecases
 
 1. Long term memory for LLM (Language Model)
