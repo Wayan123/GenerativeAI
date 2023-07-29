@@ -43,3 +43,17 @@ https://platform.openai.com/tokenizer
 ## Pricing
 
 Prices are per 1,000 tokens. You can think of tokens as pieces of words, where 1,000 tokens is about 750 words.
+
+## How to get access to GPT4?
+
+https://help.openai.com/en/articles/7102672-how-can-i-access-gpt-4
+
+## Can I fine-tune on GPT-4?
+
+No
+
+https://help.openai.com/en/articles/7127982-can-i-fine-tune-on-gpt-4
+
+## Best Practices for API Key Safety
+
+https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
