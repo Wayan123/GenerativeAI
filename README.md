@@ -8,18 +8,19 @@ Generative AI models are built by training on a large dataset of general example
 
 ## Life Cycle of Generative AI Models
 
-🔹 Data collection (web scraping, APIs, etc.)
-🔹 Pre-processing (cleaning, tokenization, etc.)
-🔹 Model training (unsupervised learning, transfer learning)
-🔹 Fine-tuning (supervised learning, specialized datasets)
-🔹 Deployment (APIs, applications)
-🔹 Maintenance (updates, improvements)
+- Data collection (web scraping, APIs, etc.)
+- Pre-processing (cleaning, tokenization, etc.)
+- Model training (unsupervised learning, transfer learning)
+- Fine-tuning (supervised learning, specialized datasets)
+- Deployment (APIs, applications)
+- Maintenance (updates, improvements)
 
 ## Predictive AI and Generative AI
 
 Generative AI and predictive AI are two different types of artificial intelligence (AI) that are used for different purposes
 
-Predictive AI is used to predict future events based on past data. Generative AI is used to create new data based on patterns and structures learned from existing data.
+- Predictive AI is used to predict future events based on past data.
+- Generative AI is used to create new data based on patterns and structures learned from existing data.
 
 ## Embeddings (Numerical Vector)
 
@@ -58,6 +59,8 @@ Fine-tuning is a common approach to transfer learning, where knowledge gained fr
     `RLHF` is a type of fine-tuning that uses human feedback to train the LLM. Human feedback can be collected in a variety of ways, such as through surveys, interviews, or user studies. RLHF is a more complex and time-consuming way to fine-tune an LLM, but it can be more effective than SFT.ur data.
 
 ## Retrieval Augmented Generation (RAG)
+
+Retrieval of highly relevant documents using natural language search queries.
 
 LLM's knowledge is restricted to its training set. So, suppose the model was trained on data up to 2021 and is asked about a company founded in 2023. In that case, it may generate a plausible but entirely fabricated description - a phenomenon known as `hallucination`.
 
